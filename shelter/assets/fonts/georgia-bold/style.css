@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Georgia';
+    src: local('Georgia Bold'), local('Georgia-Bold'),
+        url('Georgia-Bold.woff2') format('woff2'),
+        url('Georgia-Bold.woff') format('woff'),
+        url('Georgia-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+  }

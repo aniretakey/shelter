@@ -1,0 +1,79 @@
+/* FONTS */
+@font-face {
+  font-family: "Arial";
+  src: local("Arial Regular"), local("Arial-Regular"),
+    url("/assets/fonts/arial/ArialMT.woff2") format("woff2"),
+    url("/assets/fonts/arial/ArialMT.woff") format("woff"),
+    url("/assets/fonts/arial/ArialMT.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Arial";
+  src: local("Arial Italic"), local("Arial-Italic"),
+    url("/assets/fonts/arial-italic/Arial-ItalicMT.woff2") format("woff2"),
+    url("/assets/fonts/arial-italic/Arial-ItalicMT.woff") format("woff"),
+    url("/assets/fonts/arial-italic/Arial-ItalicMT.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Georgia";
+  src: local("Georgia Regular"), local("Georgia-Regular"),
+    url("/assets/fonts/georgia/Georgia.woff2") format("woff2"),
+    url("/assets/fonts/georgia/Georgia.woff") format("woff"),
+    url("/assets/fonts/georgia/georgia-regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Georgia";
+  src: local("Georgia Bold"), local("Georgia-Bold"),
+    url("/assets/fonts/georgia-bold/Georgia-Bold.woff2") format("woff2"),
+    url("/assets/fonts/georgia-bold/Georgia-Bold.woff") format("woff"),
+    url("/assets/fonts/georgia-bold/Georgia-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+:root {
+  --color-dark-3xl: #292929;
+  --color-dark-2xl: #444444;
+  --color-dark-xl: #4c4c4c;
+  --color-dark-l: #545454;
+  --color-dark-m: #b2b2b2;
+  --color-dark-s: #cdcdcd;
+  --color-light-s: #fafafa;
+  --color-light-l: #f6f6f6;
+  --color-light-xl: #ffffff;
+  --color-primary: #f1cdb3;
+  --color-primary-light: #fddcc4;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-size: 1.5rem;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.wrapper {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  /* height: 100vh; */
+  background: url(/assets/images/noise_transparent_2x.png),
+    radial-gradient(100% 215.42% at 0% 0%, #5b483a 0%, #262425 100%);
+}
+
+.header__logo > a {
+  text-decoration: none;
+  font-size: 3.2rem;
+  color: var(--color-primary);
+}
