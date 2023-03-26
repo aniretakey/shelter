@@ -17,14 +17,19 @@ h1 {
 h3 {
   font-family: Georgia, "Times New Roman", Times, serif;
   @include font($size: 3.5rem, $height: 4.55rem);
+  color: var(--color-dark-l);
+  letter-spacing: 0.2rem;
+  margin: 0;
 }
 
 h4 {
   font-family: Georgia, "Times New Roman", Times, serif;
   @include font($size: 2rem, $height: 2.3rem);
+  margin: 0;
 }
 
 h5 {
   font-family: Georgia, "Times New Roman", Times, serif;
   @include font($size: 1.5rem, $height: 1.65rem);
+  margin: 0;
 }

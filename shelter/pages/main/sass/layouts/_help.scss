@@ -1,0 +1,24 @@
+.help {
+  display: flex;
+  justify-content: center;
+}
+
+.help-title {
+  max-width: 308px;
+  margin: auto;
+  text-align: center;
+  margin-top: 80px;
+}
+
+.help__elements {
+  margin: 60px 0 100px;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.icons {
+  height: 113px;
+  padding: 0 60px;
+}

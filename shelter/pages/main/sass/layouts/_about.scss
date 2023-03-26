@@ -1,0 +1,21 @@
+.about__wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.about__content {
+  order: 2;
+  max-width: 430px;
+  margin: 95px 0 100px 0;
+}
+
+.about__image {
+  order: 1;
+  margin: 80px 120px 20px 20px;
+}
+
+.about__text {
+  padding: 6px 0;
+  color: var(--color-dark-xl);
+  line-height: 24px;
+}
