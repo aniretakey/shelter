@@ -1,0 +1,89 @@
+.our-friends {
+  background-color: var(--color-light-l);
+}
+
+.our-friends-wrapper {
+  padding-top: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  max-height: 100%;
+}
+
+.our-friends__title {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  @include font($size: 3.5rem, $height: 4.55rem);
+  color: var(--color-dark-l);
+  letter-spacing: 0.2rem;
+  align-self: center;
+  letter-spacing: 0.21rem;
+  max-width: 400px;
+  text-align: center;
+  margin: auto 390px auto 410px;
+}
+
+.layout-4-column {
+  width: 1200px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 30px 40px;
+  margin: 58px 0 45px 8px;
+}
+
+.our-friends__item {
+  max-width: 270px;
+  height: 435px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  cursor: pointer;
+  background-color: var(--color-light-s);
+  border-radius: 9px;
+  transition: all 0.5s;
+
+  &:hover {
+    background-color: var(--color-light-xl);
+    box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
+
+    .learn-more-button {
+      background-color: var(--color-primary-light);
+      border: var(--color-primary-light);
+    }
+  }
+}
+
+.our-friends__image {
+  display: block;
+  max-width: 270px;
+  max-height: 270px;
+  border-radius: 9px 9px 0 0;
+}
+
+.pet-name {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: var(--color-dark-l);
+  font-size: 2rem;
+  letter-spacing: 0.96px;
+  margin: 30px 0;
+}
+
+.pagination {
+  margin: 16px auto 100px 428px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.arrow-button {
+  margin: 0 10px;
+}
+
+.arrow-symbols {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  @include font($size: 2rem, $height: 2.3rem);
+  margin: 0;
+}

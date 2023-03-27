@@ -1,0 +1,70 @@
+.footer {
+  background: url(../../../../assets/images/noise_transparent_2x.png),
+    radial-gradient(110.67% 538.64% at 5.73% 50%, #513d2f 0%, #1a1a1c 100%),
+    #211f20;
+}
+
+.layout-2-column {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+
+.footer__contacts-container {
+  max-width: 278px;
+  margin-left: 10px;
+  margin-top: 58px;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer__locations-container {
+  max-width: 310px;
+  margin-left: 10px;
+  margin-top: 58px;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-title {
+  color: var(--color-light-xl);
+  margin-bottom: 32px;
+}
+
+.footer__image {
+  display: flex;
+  margin-top: 40px;
+  margin-right: -10px;
+}
+
+.icons-footer {
+  max-height: 40x;
+}
+
+.footer__item {
+  display: flex;
+  padding: 5px 0 35px;
+  align-items: center;
+  transition: all 0.3s;
+
+  &:hover {
+    color: var(--color-light-xl);
+    cursor: pointer;
+    text-shadow: 1px 1px 2px var(--color-primary-light);
+  }
+}
+
+.footer_address {
+  padding: 0 0 24px;
+}
+
+.footer__description {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: var(--color-primary);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 115%;
+  letter-spacing: 0.1rem;
+  padding-left: 20px;
+}

@@ -1,0 +1,21 @@
+.not-only__wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 90px 0 0;
+}
+
+.not-only__content {
+  padding: 165px 0 0 0;
+  max-width: 460px;
+}
+
+.not-only__text {
+  color: var(--color-dark-s);
+  line-height: 160%;
+  margin: 0;
+  padding: 40px 0;
+}
+
+.not-only__image {
+  max-width: 698px;
+}

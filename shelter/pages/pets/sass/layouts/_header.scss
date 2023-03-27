@@ -1,0 +1,72 @@
+.header__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  padding: 30px 0 30px 9px;
+}
+
+.header__logo {
+  text-decoration: none;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 3.2rem;
+  line-height: 110%;
+  letter-spacing: 0.185rem;
+  color: var(--color-dark-l);
+}
+
+.header__description {
+  margin: 0;
+  padding: 10px 2px 0 2px;
+  font-size: 1.3rem;
+  letter-spacing: 1.4px;
+  color: var(--color-dark-3xl);
+}
+
+.navigation {
+  width: 443px;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  align-self: flex-end;
+  padding: 0;
+  margin: 0;
+  padding: 26px 0 30px 10px;
+}
+
+.header__link {
+  list-style: none;
+  // padding-left: 5px;
+  &:hover {
+    a {
+      transition: all 0.5s;
+      color: var(--color-dark-3xl);
+    }
+  }
+
+  &:active {
+    a {
+      transition: all 0.3s;
+      color: var(--color-dark-3xl);
+      border-bottom: 3px solid var(--color-primary);
+      padding: 4px 0;
+    }
+  }
+}
+
+.header__link_active {
+  a {
+    cursor: default;
+    color: var(--color-dark-3xl);
+    border-bottom: 3px solid var(--color-primary);
+    padding: 4px 0;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-dark-l);
+  line-height: 160%;
+}
