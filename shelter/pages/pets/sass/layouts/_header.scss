@@ -58,6 +58,7 @@
 
 .header__link_active {
   a {
+    cursor: default;
     color: var(--color-dark-3xl);
     border-bottom: 3px solid var(--color-primary);
     padding: 4px 0;

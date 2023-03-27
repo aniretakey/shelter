@@ -45,6 +45,13 @@
   display: flex;
   padding: 5px 0 35px;
   align-items: center;
+  transition: all 0.3s;
+
+  &:hover {
+    color: var(--color-light-xl);
+    cursor: pointer;
+    text-shadow: 1px 1px 2px var(--color-primary-light);
+  }
 }
 
 .footer_address {

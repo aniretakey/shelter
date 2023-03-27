@@ -460,7 +460,7 @@ h5 {
   border: 2px solid var(--color-primary);
   background-color: var(--color-light-l);
   border-radius: 100px;
-  transition: all 0.3s;
+  transition: all 0.5s;
 }
 .arrow-button:hover {
   background-color: var(--color-primary-light);
@@ -481,7 +481,7 @@ h5 {
 .page-number-button {
   background-color: var(--color-primary);
   border: 2px solid var(--color-primary);
-  transition: all 0.3s;
+  transition: all 0.5s;
 }
 .page-number-button:hover {
   background-color: var(--color-primary-light);
@@ -563,6 +563,7 @@ h5 {
 }
 
 .header__link_active a {
+  cursor: default;
   color: var(--color-dark-3xl);
   border-bottom: 3px solid var(--color-primary);
   padding: 4px 0;
@@ -588,6 +589,13 @@ a {
 }
 
 .our-friends__title {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 3.5rem;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 4.55rem;
+  color: var(--color-dark-l);
+  letter-spacing: 0.2rem;
   align-self: center;
   letter-spacing: 0.21rem;
   max-width: 400px;
@@ -650,6 +658,15 @@ a {
   margin: 0 10px;
 }
 
+.arrow-symbols {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 2rem;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 2.3rem;
+  margin: 0;
+}
+
 .footer {
   background: url(../../../../assets/images/noise_transparent_2x.png), radial-gradient(110.67% 538.64% at 5.73% 50%, #513d2f 0%, #1a1a1c 100%), #211f20;
 }
@@ -695,6 +712,12 @@ a {
   display: flex;
   padding: 5px 0 35px;
   align-items: center;
+  transition: all 0.3s;
+}
+.footer__item:hover {
+  color: var(--color-light-xl);
+  cursor: pointer;
+  text-shadow: 1px 1px 2px var(--color-primary-light);
 }
 
 .footer_address {

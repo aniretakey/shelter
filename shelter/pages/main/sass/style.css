@@ -460,7 +460,7 @@ h5 {
   border: 2px solid var(--color-primary);
   background-color: var(--color-light-l);
   border-radius: 100px;
-  transition: all 0.3s;
+  transition: all 0.5s;
 }
 .arrow-button:hover {
   background-color: var(--color-primary-light);
@@ -537,6 +537,7 @@ h5 {
 }
 
 .header__link_active a {
+  cursor: default;
   color: var(--color-light-s);
   border-bottom: 3px solid var(--color-primary);
   padding: 4px 0;
@@ -701,14 +702,14 @@ a {
 
 .in-addition-wrapper {
   display: flex;
-  justify-content: stretch;
-  margin: 0 0 0 155px;
+  justify-content: center;
+  margin: 0 auto;
 }
 
 .in-addition__content {
   order: 2;
   max-width: 380px;
-  margin: 83px 0 88px;
+  margin: 83px 0 88px 32px;
 }
 
 .in-addition__title {
@@ -718,7 +719,7 @@ a {
 
 .in-addition__image {
   order: 1;
-  margin: 94px 28px;
+  margin: 94px 0 0 15px;
 }
 
 .in-addition__card-container {
@@ -805,6 +806,12 @@ a {
   display: flex;
   padding: 5px 0 35px;
   align-items: center;
+  transition: all 0.3s;
+}
+.footer__item:hover {
+  color: var(--color-light-xl);
+  cursor: pointer;
+  text-shadow: 1px 1px 2px var(--color-primary-light);
 }
 
 .footer_address {
@@ -820,6 +827,7 @@ a {
   line-height: 115%;
   letter-spacing: 0.1rem;
   padding-left: 20px;
+  transition: all 0.5s;
 }
 
 /*# sourceMappingURL=style.css.map */

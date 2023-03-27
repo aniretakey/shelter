@@ -12,6 +12,10 @@
 }
 
 .our-friends__title {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  @include font($size: 3.5rem, $height: 4.55rem);
+  color: var(--color-dark-l);
+  letter-spacing: 0.2rem;
   align-self: center;
   letter-spacing: 0.21rem;
   max-width: 400px;
@@ -76,4 +80,10 @@
 
 .arrow-button {
   margin: 0 10px;
+}
+
+.arrow-symbols {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  @include font($size: 2rem, $height: 2.3rem);
+  margin: 0;
 }
