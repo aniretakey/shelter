@@ -3,20 +3,26 @@
   justify-content: center;
 }
 
+.help-wrapper {
+  margin-bottom: 50px;
+}
+
 .help-title {
   max-width: 310px;
-  margin: auto;
+  // margin: auto;
+  margin: auto 392px auto 408px;
   text-align: center;
-  margin-top: 80px;
+  margin-top: 83px;
 }
 
 .help__elements {
-  width: 1146px;
-  margin: 60px 0 45px;
+  width: 1026px;
+  margin: 59px 0 45px 50px;
   display: flex;
   justify-content: center;
   align-content: center;
   flex-wrap: wrap;
+  gap: 55px 120px;
 }
 
 .icons {
@@ -24,9 +30,12 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 0 60px 55px 60px;
+  // padding: 0 15px 0 15px;
 }
 
 .help__icons-name {
+  font-size: 2rem;
   padding: 30px 0 0;
+  line-height: 115%;
+  letter-spacing: 0.1rem;
 }
