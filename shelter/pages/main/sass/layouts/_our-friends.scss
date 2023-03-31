@@ -1,5 +1,6 @@
 .our-friends {
   background-color: var(--color-light-l);
+  width: 100%;
 }
 
 .our-friends-wrapper {
@@ -11,18 +12,18 @@
 .our-friends__header {
   letter-spacing: 0.21rem;
   max-width: 400px;
-  margin: auto 390px auto 410px;
+  margin: auto;
   text-align: center;
-  margin-top: 74px;
+  margin-top: 75px;
 }
 
 .carousel-elements {
-  width: 1200px;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   flex-direction: row;
   align-items: center;
-  margin: 59px 0 60px 8px;
+  margin: 59px 0 60px;
 }
 
 .our-friends__item {

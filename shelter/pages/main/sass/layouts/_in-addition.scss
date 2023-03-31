@@ -1,5 +1,6 @@
 .in-addition {
   background-color: var(--color-light-l);
+  width: 100%;
 }
 
 .in-addition-wrapper {
@@ -11,7 +12,7 @@
 .in-addition__content {
   order: 2;
   max-width: 380px;
-  margin: 83px 0 88px 32px;
+  margin: 85px 0 88px;
 }
 
 .in-addition__title {
@@ -21,7 +22,7 @@
 
 .in-addition__image {
   order: 1;
-  margin: 94px 0 0 15px;
+  margin: 95px 30px 0 0;
 }
 
 .in-addition__card-container {

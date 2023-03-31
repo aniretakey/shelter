@@ -359,6 +359,7 @@ html {
 }
 
 body {
+  overflow-x: hidden;
   font-size: 1.5rem;
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -495,7 +496,7 @@ h5 {
 
 .button_long {
   align-self: center;
-  margin: 0 0 100px 15px;
+  margin: 0 0 100px 0;
 }
 
 .wrapper {
@@ -517,7 +518,7 @@ h5 {
 }
 
 .logo {
-  padding: 30px 0 30px 9px;
+  padding: 30px 0 30px;
 }
 
 .header__logo {
@@ -545,7 +546,7 @@ h5 {
   align-self: flex-end;
   padding: 0;
   margin: 0;
-  padding: 26px 0 30px 10px;
+  padding: 26px 0 30px;
 }
 
 .header__link {
@@ -577,6 +578,7 @@ a {
 
 .our-friends {
   background-color: var(--color-light-l);
+  width: 100%;
 }
 
 .our-friends-wrapper {
@@ -600,16 +602,16 @@ a {
   letter-spacing: 0.21rem;
   max-width: 400px;
   text-align: center;
-  margin: auto 390px auto 410px;
+  margin: auto;
 }
 
 .layout-4-column {
-  width: 1200px;
+  width: 100%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   gap: 30px 40px;
-  margin: 58px 0 45px 8px;
+  margin: 58px 0 45px;
 }
 
 .our-friends__item {
@@ -648,7 +650,7 @@ a {
 }
 
 .pagination {
-  margin: 16px auto 100px 428px;
+  margin: 16px auto 100px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -679,16 +681,15 @@ a {
 
 .footer__contacts-container {
   max-width: 278px;
-  margin-left: 10px;
   margin-top: 58px;
   display: flex;
   flex-direction: column;
 }
 
 .footer__locations-container {
-  max-width: 310px;
-  margin-left: 10px;
+  max-width: 320px;
   margin-top: 58px;
+  margin-left: 20px;
   display: flex;
   flex-direction: column;
 }
@@ -701,7 +702,6 @@ a {
 .footer__image {
   display: flex;
   margin-top: 40px;
-  margin-right: -10px;
 }
 
 .icons-footer {
@@ -733,6 +733,7 @@ a {
   line-height: 115%;
   letter-spacing: 0.1rem;
   padding-left: 20px;
+  transition: all 0.5s;
 }
 
 /*# sourceMappingURL=style.css.map */

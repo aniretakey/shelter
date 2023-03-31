@@ -359,6 +359,7 @@ html {
 }
 
 body {
+  overflow-x: hidden;
   font-size: 1.5rem;
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -474,7 +475,7 @@ h5 {
 
 .button_long {
   align-self: center;
-  margin: 0 0 100px 15px;
+  margin: 0 0 100px;
 }
 
 .wrapper {
@@ -485,7 +486,7 @@ h5 {
 
 .gradient-background {
   background: url("../../../assets/noise_transparent.png"), radial-gradient(100% 215.42% at 0% 0%, #5b483a 0%, #262425 100%);
-  width: 100vw;
+  width: 100%;
   height: 908px;
 }
 
@@ -569,11 +570,13 @@ a {
 
 .not-only__image {
   max-width: 698px;
+  max-width: 100%;
 }
 
 .about__wrapper {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
+  width: 100%;
 }
 
 .about__content {
@@ -584,7 +587,7 @@ a {
 
 .about__image {
   order: 1;
-  margin: 80px 120px 20px 20px;
+  margin: 80px -55px 0 0;
 }
 
 .about__text {
@@ -595,6 +598,7 @@ a {
 
 .our-friends {
   background-color: var(--color-light-l);
+  width: 100%;
 }
 
 .our-friends-wrapper {
@@ -606,18 +610,18 @@ a {
 .our-friends__header {
   letter-spacing: 0.21rem;
   max-width: 400px;
-  margin: auto 390px auto 410px;
+  margin: auto;
   text-align: center;
-  margin-top: 74px;
+  margin-top: 75px;
 }
 
 .carousel-elements {
-  width: 1200px;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   flex-direction: row;
   align-items: center;
-  margin: 59px 0 60px 8px;
+  margin: 59px 0 60px;
 }
 
 .our-friends__item {
@@ -667,14 +671,14 @@ a {
 
 .help-title {
   max-width: 310px;
-  margin: auto 392px auto 408px;
+  margin: auto;
   text-align: center;
-  margin-top: 83px;
+  margin-top: 80px;
 }
 
 .help__elements {
-  width: 1026px;
-  margin: 59px 0 45px 50px;
+  width: 100%;
+  margin: 60px auto 45px;
   display: flex;
   justify-content: center;
   align-content: center;
@@ -698,6 +702,7 @@ a {
 
 .in-addition {
   background-color: var(--color-light-l);
+  width: 100%;
 }
 
 .in-addition-wrapper {
@@ -709,7 +714,7 @@ a {
 .in-addition__content {
   order: 2;
   max-width: 380px;
-  margin: 83px 0 88px 32px;
+  margin: 85px 0 88px;
 }
 
 .in-addition__title {
@@ -719,7 +724,7 @@ a {
 
 .in-addition__image {
   order: 1;
-  margin: 94px 0 0 15px;
+  margin: 95px 30px 0 0;
 }
 
 .in-addition__card-container {
@@ -773,16 +778,15 @@ a {
 
 .footer__contacts-container {
   max-width: 278px;
-  margin-left: 10px;
   margin-top: 58px;
   display: flex;
   flex-direction: column;
 }
 
 .footer__locations-container {
-  max-width: 310px;
-  margin-left: 10px;
+  max-width: 320px;
   margin-top: 58px;
+  margin-left: 20px;
   display: flex;
   flex-direction: column;
 }
@@ -795,7 +799,6 @@ a {
 .footer__image {
   display: flex;
   margin-top: 40px;
-  margin-right: -10px;
 }
 
 .icons-footer {

@@ -9,15 +9,14 @@
 
 .help-title {
   max-width: 310px;
-  // margin: auto;
-  margin: auto 392px auto 408px;
+  margin: auto;
   text-align: center;
-  margin-top: 83px;
+  margin-top: 80px;
 }
 
 .help__elements {
-  width: 1026px;
-  margin: 59px 0 45px 50px;
+  width: 100%;
+  margin: 60px auto 45px;
   display: flex;
   justify-content: center;
   align-content: center;

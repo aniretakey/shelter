@@ -18,4 +18,7 @@
 
 .not-only__image {
   max-width: 698px;
+  max-width: 100%;
+  // width: clamp(40rem, 59%, 69.8rem);
+  // padding-top: clamp(9rem, 7%, 15rem);
 }

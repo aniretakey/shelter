@@ -12,16 +12,15 @@
 
 .footer__contacts-container {
   max-width: 278px;
-  margin-left: 10px;
   margin-top: 58px;
   display: flex;
   flex-direction: column;
 }
 
 .footer__locations-container {
-  max-width: 310px;
-  margin-left: 10px;
+  max-width: 320px;
   margin-top: 58px;
+  margin-left: 20px;
   display: flex;
   flex-direction: column;
 }
@@ -34,7 +33,6 @@
 .footer__image {
   display: flex;
   margin-top: 40px;
-  margin-right: -10px;
 }
 
 .icons-footer {
