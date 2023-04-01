@@ -1,7 +1,9 @@
 .footer {
+  width: 100%;
   background: url("../../../assets/noise_transparent.png"),
     radial-gradient(110.67% 538.64% at 5.73% 50%, #513d2f 0%, #1a1a1c 100%),
     #211f20;
+  padding: 40px 0 0;
 }
 
 .layout-2-column {
@@ -12,17 +14,17 @@
 
 .footer__contacts-container {
   max-width: 278px;
-  margin-top: 58px;
   display: flex;
   flex-direction: column;
+  padding-top: 16px;
 }
 
 .footer__locations-container {
   max-width: 320px;
-  margin-top: 58px;
   margin-left: 20px;
   display: flex;
   flex-direction: column;
+  padding-top: 16px;
 }
 
 .footer-title {
@@ -32,7 +34,7 @@
 
 .footer__image {
   display: flex;
-  margin-top: 40px;
+  max-width: 25%;
 }
 
 .icons-footer {
