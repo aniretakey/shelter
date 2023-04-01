@@ -7,12 +7,20 @@
 .in-addition-wrapper {
   display: flex;
   justify-content: center;
+  align-items: center;
   margin: 0 auto;
+
+  @include media-tablet {
+    flex-direction: column;
+  }
 }
 
 .in-addition__content {
   order: 2;
   max-width: 380px;
+  @include media-tablet {
+    order: 1;
+  }
 }
 
 .in-addition__title {
@@ -23,6 +31,11 @@
 .in-addition__image {
   order: 1;
   padding: 10px 30px 0 0;
+  @include media-tablet {
+    order: 2;
+    padding: 0;
+    margin-top: 60px;
+  }
 }
 
 .in-addition__card-container {

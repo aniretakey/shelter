@@ -54,11 +54,27 @@
     }
   }
 
-  @include media-tablet {
+  @include media-desktop {
+    margin: auto;
+  }
+
+  @include media-1030 {
     &:nth-child(4) {
       display: none;
     }
-    margin: 0 17px;
+  }
+
+  @include media-700 {
+    &:nth-child(2) {
+      display: none;
+    }
+  }
+
+  @include media-tablet {
+    // &:nth-child(4) {
+    //   display: none;
+    // }
+    margin: auto;
     &:last-child {
       margin: 0 0;
     }
