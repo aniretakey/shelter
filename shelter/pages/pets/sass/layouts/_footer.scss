@@ -4,12 +4,37 @@
     radial-gradient(110.67% 538.64% at 5.73% 50%, #513d2f 0%, #1a1a1c 100%),
     #211f20;
   padding: 40px 0 0;
+
+  @include media-tablet {
+    padding: 10px 0 0;
+  }
 }
 
 .layout-2-column {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
+
+  @include media-desktop {
+    justify-content: space-evenly;
+  }
+
+  @include media-1030 {
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-left: 15px;
+  }
+
+  @include media-tablet-min {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  @include media-700 {
+    align-items: center;
+    margin: auto;
+  }
 }
 
 .footer__contacts-container {
@@ -17,6 +42,20 @@
   display: flex;
   flex-direction: column;
   padding-top: 16px;
+
+  @include media-tablet {
+    margin: 5px 0 0;
+  }
+
+  @include media-tablet-min {
+    max-width: 90%;
+    margin: auto;
+  }
+
+  @include media-400 {
+    margin: auto;
+    align-items: center;
+  }
 }
 
 .footer__locations-container {
@@ -25,20 +64,62 @@
   display: flex;
   flex-direction: column;
   padding-top: 16px;
+
+  @include media-tablet {
+    margin: 5px 0 0 55px;
+  }
+
+  @include media-tablet-min {
+    max-width: 90%;
+    margin: 5px auto 0;
+  }
+
+  @include media-400 {
+    margin: auto;
+  }
+
+  @include media-350 {
+    margin: auto 0;
+  }
 }
 
 .footer-title {
   color: var(--color-light-xl);
   margin-bottom: 32px;
+
+  @include media-400 {
+    max-width: 270px;
+    text-align: center;
+    margin: auto;
+    padding-bottom: 20px;
+  }
 }
 
 .footer__image {
   display: flex;
+  justify-content: center;
   max-width: 25%;
+
+  > img {
+    display: flex;
+    align-self: center;
+
+    @include media-400 {
+      max-width: 260px;
+    }
+  }
+
+  @include media-1030 {
+    margin: 30px auto 0;
+  }
+
+  @include media-tablet-min {
+    padding: 5px 20px 0 0;
+  }
 }
 
 .icons-footer {
-  max-height: 40x;
+  max-height: 40px;
 }
 
 .footer__item {
@@ -52,10 +133,26 @@
     cursor: pointer;
     text-shadow: 1px 1px 2px var(--color-primary-light);
   }
+
+  @include media-tablet {
+    padding-bottom: 30px;
+  }
+
+  @include media-400 {
+    padding: 20px 0;
+  }
 }
 
 .footer_address {
   padding: 0 0 24px;
+
+  @include media-400 {
+    padding: 20px 0;
+  }
+
+  @include media-350 {
+    padding: 19px 0;
+  }
 }
 
 .footer__description {
@@ -65,7 +162,11 @@
   font-weight: 400;
   font-size: 20px;
   line-height: 115%;
-  letter-spacing: 0.1rem;
+  letter-spacing: 0.06rem;
   padding-left: 20px;
   transition: all 0.5s;
+
+  @include media-400 {
+    padding-left: 10px;
+  }
 }

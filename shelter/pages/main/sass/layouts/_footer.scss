@@ -25,8 +25,11 @@
     margin-left: 15px;
   }
 
-  @include media-700 {
+  @include media-tablet-min {
     flex-direction: column;
+  }
+
+  @include media-700 {
     justify-content: center;
     align-items: center;
     margin: auto;
@@ -39,6 +42,15 @@
   display: flex;
   flex-direction: column;
   padding-top: 16px;
+
+  @include media-tablet {
+    margin: 5px 0 0;
+  }
+
+  @include media-tablet-min {
+    max-width: 90%;
+    margin: auto;
+  }
 
   @include media-400 {
     margin: auto;
@@ -54,7 +66,12 @@
   padding-top: 16px;
 
   @include media-tablet {
-    margin: 0 0 0 35px;
+    margin: 5px 0 0 55px;
+  }
+
+  @include media-tablet-min {
+    max-width: 90%;
+    margin: 5px auto 0;
   }
 
   @include media-400 {
@@ -86,6 +103,10 @@
 
   @include media-1030 {
     margin: 30px auto 0;
+  }
+
+  @include media-tablet-min {
+    padding: 5px 20px 0 0;
   }
 }
 
@@ -129,7 +150,7 @@
   font-weight: 400;
   font-size: 20px;
   line-height: 115%;
-  letter-spacing: 0.1rem;
+  letter-spacing: 0.06rem;
   padding-left: 20px;
   transition: all 0.5s;
 }

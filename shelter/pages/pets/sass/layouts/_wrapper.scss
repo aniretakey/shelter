@@ -1,14 +1,15 @@
 .wrapper {
   max-width: 1200px;
-  max-height: 908px;
-  margin: auto;
+  // max-height: 908px;
+  max-height: 100%;
+  margin: 0 auto;
   overflow-x: hidden;
 
   @include media-desktop {
     padding: 0 30px;
   }
 
-  @include media-tablet {
+  @include media-tablet-min {
     padding: 0 10px;
   }
 }
@@ -16,6 +17,10 @@
 .gradient-background {
   background: url("../../../assets/noise_transparent.png"),
     radial-gradient(100% 215.42% at 0% 0%, #5b483a 0%, #262425 100%);
-  width: 100vw;
-  height: 908px;
+  width: 100%;
+  max-height: 908px;
+  @include media-tablet {
+    height: 100%;
+    max-height: none;
+  }
 }
