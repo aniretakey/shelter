@@ -1,5 +1,15 @@
 .our-friends {
   background-color: var(--color-light-l);
+  width: 100%;
+  padding: 75px 0 100px;
+
+  @include media-tablet {
+    padding-top: 80px;
+  }
+
+  @include media-400 {
+    padding: 45px 0 42px;
+  }
 }
 
 .our-friends-wrapper {
@@ -11,21 +21,34 @@
 .our-friends__header {
   letter-spacing: 0.21rem;
   max-width: 400px;
-  margin: auto 390px auto 410px;
+  margin: auto;
   text-align: center;
-  margin-top: 74px;
+
+  @include media-350 {
+    letter-spacing: 0.06em;
+  }
 }
 
 .carousel-elements {
-  width: 1200px;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   flex-direction: row;
   align-items: center;
-  margin: 59px 0 60px 8px;
+  margin: 59px 0 60px;
+
+  @include media-400 {
+    margin-top: 42px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 42px;
+  }
 }
 
 .our-friends__item {
+  order: 2;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -46,6 +69,51 @@
       background-color: var(--color-primary-light);
       border: var(--color-primary-light);
     }
+  }
+
+  @include media-desktop {
+    margin: auto;
+  }
+
+  @include media-1030 {
+    &:nth-child(3) {
+      display: none;
+    }
+  }
+
+  @include media-tablet {
+    margin: auto;
+    // &:last-child {
+    //   margin: 0;
+    // }
+    // &:first-child {
+    //   margin: 0;
+    // }
+  }
+
+  @include media-700 {
+    &:nth-child(2) {
+      display: none;
+    }
+  }
+
+  @include media-400 {
+    order: -1;
+    margin: 0 40px 20px;
+  }
+}
+
+.left-button {
+  order: 1;
+  @include media-400 {
+    margin: 0 40px;
+  }
+}
+
+.right-button {
+  order: 3;
+  @include media-400 {
+    margin: 0 40px;
   }
 }
 

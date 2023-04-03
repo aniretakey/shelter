@@ -1,27 +1,78 @@
 .in-addition {
   background-color: var(--color-light-l);
+  width: 100%;
+  padding: 80px 0 100px;
+
+  @include media-400 {
+    padding: 42px 0;
+  }
 }
 
 .in-addition-wrapper {
   display: flex;
   justify-content: center;
+  align-items: center;
   margin: 0 auto;
+
+  @include media-1030 {
+    flex-direction: column;
+  }
 }
 
 .in-addition__content {
+  display: flex;
+  flex-direction: column;
   order: 2;
   max-width: 380px;
-  margin: 83px 0 88px 32px;
+
+  @include media-1030 {
+    order: 1;
+  }
+
+  @include media-400 {
+    max-width: 90%;
+    align-items: center;
+  }
 }
 
 .in-addition__title {
   width: 300px;
   margin-bottom: 19px;
+
+  @include media-400 {
+    max-width: 220px;
+    font-size: 2.5rem;
+    font-weight: 400;
+    line-height: 130%;
+    letter-spacing: 0.06em;
+    text-align: center;
+  }
 }
 
 .in-addition__image {
+  display: flex;
   order: 1;
-  margin: 94px 0 0 15px;
+  padding: 10px 30px 0 0;
+
+  > img {
+    object-fit: contain;
+
+    @include media-600 {
+      max-width: 90%;
+      align-self: center;
+    }
+  }
+
+  @include media-1030 {
+    order: 2;
+    padding: 0;
+    margin-top: 60px;
+  }
+
+  @include media-600 {
+    margin-top: 25px;
+    justify-content: center;
+  }
 }
 
 .in-addition__card-container {
@@ -30,7 +81,7 @@
   text-align: center;
   align-items: center;
   margin: 20px 0;
-  width: 349px;
+  max-width: 349px;
   height: 43px;
   background-color: var(--color-primary);
   border-radius: 9px;
@@ -39,15 +90,24 @@
   &:hover {
     background-color: var(--color-primary-light);
   }
+
+  @include media-400 {
+    max-width: 281px;
+  }
 }
 
 .ico-card {
   margin: 10px 15px;
   width: 30px;
   height: 23px;
+
+  @include media-400 {
+    margin: auto 10px auto 15px;
+  }
 }
 
 .card-button {
+  display: flex;
   color: var(--color-dark-l);
   font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 2rem;
@@ -55,11 +115,24 @@
   letter-spacing: 0.115rem;
   width: 274px;
   height: 23px;
+
+  @include media-400 {
+    font-size: 1.5rem;
+    line-height: 110%;
+    letter-spacing: 0.06em;
+    align-items: center;
+  }
 }
 
 .paragraph-s {
-  width: 380px;
+  max-width: 380px;
   font-style: italic;
   font-size: 1.2rem;
   line-height: 1.8rem;
+  margin: 0;
+  color: var(--color-dark-m);
+
+  @include media-400 {
+    text-align: justify;
+  }
 }
