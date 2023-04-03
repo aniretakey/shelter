@@ -2,12 +2,20 @@
   display: flex;
   justify-content: center;
   padding: 80px 0 100px;
+
+  @include media-400 {
+    padding: 42px 0;
+  }
 }
 
 .help-title {
   max-width: 310px;
   margin: auto;
   text-align: center;
+
+  @include media-400 {
+    max-width: 250px;
+  }
 }
 
 .help__elements {
@@ -19,8 +27,14 @@
   flex-wrap: wrap;
   gap: 55px 120px;
 
-  @include media-tablet {
-    // gap: 55px 60px;
+  @include media-900 {
+    gap: 55px 60px;
+  }
+
+  @include media-400 {
+    justify-content: flex-start;
+    margin-top: 42px;
+    gap: 30px 30px;
   }
 }
 
@@ -29,6 +43,24 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  @include media-900 {
+    width: 170px;
+    height: 113px;
+  }
+
+  @include media-400 {
+    width: 130px;
+    height: 87px;
+  }
+
+  > img {
+    object-fit: contain;
+    @include media-400 {
+      width: 50px;
+      height: 50px;
+    }
+  }
 }
 
 .help__icons-name {
@@ -36,4 +68,9 @@
   padding: 30px 0 0;
   line-height: 115%;
   letter-spacing: 0.1rem;
+
+  @include media-400 {
+    font-size: 15px;
+    line-height: 110%;
+  }
 }
