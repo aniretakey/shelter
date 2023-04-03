@@ -1,5 +1,6 @@
 .our-friends {
   background-color: var(--color-light-l);
+  width: 100%;
 }
 
 .our-friends-wrapper {
@@ -20,16 +21,16 @@
   letter-spacing: 0.21rem;
   max-width: 400px;
   text-align: center;
-  margin: auto 390px auto 410px;
+  margin: auto;
 }
 
 .layout-4-column {
-  width: 1200px;
+  width: 100%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   gap: 30px 40px;
-  margin: 58px 0 45px 8px;
+  margin: 58px 0 45px;
 }
 
 .our-friends__item {
@@ -72,7 +73,7 @@
 }
 
 .pagination {
-  margin: 16px auto 100px 428px;
+  margin: 16px auto 100px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
