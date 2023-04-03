@@ -412,8 +412,14 @@ h5 {
   line-height: 1.65rem;
   margin: 0;
   color: var(--color-dark-l);
-  letter-spacing: 0.09rem;
+  letter-spacing: 0.06em;
   line-height: 110%;
+}
+@media (max-width: 400px) {
+  h5 {
+    line-height: 160%;
+    font-size: small;
+  }
 }
 
 .button {
@@ -1047,6 +1053,11 @@ a {
   width: 100%;
   padding: 80px 0 100px;
 }
+@media (max-width: 400px) {
+  .in-addition {
+    padding: 42px 0;
+  }
+}
 
 .in-addition-wrapper {
   display: flex;
@@ -1061,6 +1072,8 @@ a {
 }
 
 .in-addition__content {
+  display: flex;
+  flex-direction: column;
   order: 2;
   max-width: 380px;
 }
@@ -1069,21 +1082,53 @@ a {
     order: 1;
   }
 }
+@media (max-width: 400px) {
+  .in-addition__content {
+    max-width: 90%;
+    align-items: center;
+  }
+}
 
 .in-addition__title {
   width: 300px;
   margin-bottom: 19px;
 }
+@media (max-width: 400px) {
+  .in-addition__title {
+    max-width: 220px;
+    font-size: 2.5rem;
+    font-weight: 400;
+    line-height: 130%;
+    letter-spacing: 0.06em;
+    text-align: center;
+  }
+}
 
 .in-addition__image {
+  display: flex;
   order: 1;
   padding: 10px 30px 0 0;
+}
+.in-addition__image > img {
+  object-fit: contain;
+}
+@media (max-width: 600px) {
+  .in-addition__image > img {
+    max-width: 90%;
+    align-self: center;
+  }
 }
 @media (max-width: 1030px) {
   .in-addition__image {
     order: 2;
     padding: 0;
     margin-top: 60px;
+  }
+}
+@media (max-width: 600px) {
+  .in-addition__image {
+    margin-top: 25px;
+    justify-content: center;
   }
 }
 
@@ -1093,7 +1138,7 @@ a {
   text-align: center;
   align-items: center;
   margin: 20px 0;
-  width: 349px;
+  max-width: 349px;
   height: 43px;
   background-color: var(--color-primary);
   border-radius: 9px;
@@ -1102,14 +1147,25 @@ a {
 .in-addition__card-container:hover {
   background-color: var(--color-primary-light);
 }
+@media (max-width: 400px) {
+  .in-addition__card-container {
+    max-width: 281px;
+  }
+}
 
 .ico-card {
   margin: 10px 15px;
   width: 30px;
   height: 23px;
 }
+@media (max-width: 400px) {
+  .ico-card {
+    margin: auto 10px auto 15px;
+  }
+}
 
 .card-button {
+  display: flex;
   color: var(--color-dark-l);
   font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 2rem;
@@ -1118,13 +1174,27 @@ a {
   width: 274px;
   height: 23px;
 }
+@media (max-width: 400px) {
+  .card-button {
+    font-size: 1.5rem;
+    line-height: 110%;
+    letter-spacing: 0.06em;
+    align-items: center;
+  }
+}
 
 .paragraph-s {
-  width: 380px;
+  max-width: 380px;
   font-style: italic;
   font-size: 1.2rem;
   line-height: 1.8rem;
   margin: 0;
+  color: var(--color-dark-m);
+}
+@media (max-width: 400px) {
+  .paragraph-s {
+    text-align: justify;
+  }
 }
 
 .footer {
@@ -1160,6 +1230,8 @@ a {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin: auto;
+    align-items: center;
   }
 }
 
@@ -1168,6 +1240,12 @@ a {
   display: flex;
   flex-direction: column;
   padding-top: 16px;
+}
+@media (max-width: 400px) {
+  .footer__contacts-container {
+    margin: auto;
+    align-items: center;
+  }
 }
 
 .footer__locations-container {
@@ -1179,13 +1257,26 @@ a {
 }
 @media (max-width: 768px) {
   .footer__locations-container {
-    margin: 0 0 0 60px;
+    margin: 0 0 0 35px;
+  }
+}
+@media (max-width: 400px) {
+  .footer__locations-container {
+    margin: auto;
   }
 }
 
 .footer-title {
   color: var(--color-light-xl);
   margin-bottom: 32px;
+}
+@media (max-width: 400px) {
+  .footer-title {
+    max-width: 270px;
+    text-align: center;
+    margin: auto;
+    padding-bottom: 20px;
+  }
 }
 
 .footer__image {
@@ -1204,7 +1295,7 @@ a {
 }
 
 .icons-footer {
-  max-height: 40x;
+  max-height: 40px;
 }
 
 .footer__item {
@@ -1218,9 +1309,24 @@ a {
   cursor: pointer;
   text-shadow: 1px 1px 2px var(--color-primary-light);
 }
+@media (max-width: 768px) {
+  .footer__item {
+    padding-bottom: 30px;
+  }
+}
+@media (max-width: 400px) {
+  .footer__item {
+    padding: 20px 0;
+  }
+}
 
 .footer_address {
   padding: 0 0 24px;
+}
+@media (max-width: 400px) {
+  .footer_address {
+    padding: 20px 0;
+  }
 }
 
 .footer__description {
