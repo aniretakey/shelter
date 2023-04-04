@@ -15,10 +15,6 @@
   flex-flow: row nowrap;
   justify-content: space-between;
 
-  @include media-desktop {
-    justify-content: space-evenly;
-  }
-
   @include media-1030 {
     justify-content: center;
     flex-wrap: wrap;
@@ -166,7 +162,7 @@
   padding-left: 20px;
   transition: all 0.5s;
 
-  @include media-400 {
+  @include media-tablet-min {
     padding-left: 10px;
   }
 }
