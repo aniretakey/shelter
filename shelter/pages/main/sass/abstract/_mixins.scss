@@ -11,6 +11,12 @@
   }
 }
 
+@mixin media-desktop-min {
+  @media (max-width: calc($desktop-width - 1px)) {
+    @content;
+  }
+}
+
 @mixin media-tablet {
   @media (max-width: $tablet-width) {
     @content;
