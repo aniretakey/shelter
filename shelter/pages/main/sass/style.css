@@ -537,7 +537,6 @@ h5 {
   max-width: 1200px;
   max-height: 100%;
   margin: 0 auto;
-  overflow-x: hidden;
 }
 @media (max-width: 1279px) {
   .wrapper {
@@ -1219,11 +1218,6 @@ a {
   flex-flow: row nowrap;
   justify-content: space-between;
 }
-@media (max-width: 1280px) {
-  .layout-2-column {
-    justify-content: space-evenly;
-  }
-}
 @media (max-width: 1030px) {
   .layout-2-column {
     justify-content: center;
@@ -1371,6 +1365,11 @@ a {
   letter-spacing: 0.06rem;
   padding-left: 20px;
   transition: all 0.5s;
+}
+@media (max-width: 767px) {
+  .footer__description {
+    padding-left: 10px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
