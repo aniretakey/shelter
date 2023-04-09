@@ -29,7 +29,8 @@
   }
 }
 
-.carousel-elements {
+.carousel-container,
+.carousel {
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -83,12 +84,6 @@
 
   @include media-tablet {
     margin: auto;
-    // &:last-child {
-    //   margin: 0;
-    // }
-    // &:first-child {
-    //   margin: 0;
-    // }
   }
 
   @include media-700 {
@@ -100,6 +95,8 @@
   @include media-400 {
     order: -1;
     margin: 0 40px 20px;
+    display: flex;
+    flex-direction: row;
   }
 }
 
@@ -107,6 +104,7 @@
   order: 1;
   @include media-400 {
     margin: 0 40px;
+    order: 3;
   }
 }
 

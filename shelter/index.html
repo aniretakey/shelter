@@ -87,37 +87,30 @@
             <div class="wrapper our-friends-wrapper">
                 <h3 class="our-friends__header">Our friends who<br>are looking for a house</h3>
 
-                <div class="carousel">
-                    <div class="carousel-elements">
-                        <button class="arrow-button left-button">
+                <div>
+                    <div class="carousel-container">
+
+                        <button class="arrow-button left-button" id="btn-left">
                             <img src="assets/icons/arrow-back1.svg" alt="">
                         </button>
 
-                        <div class="our-friends__item item-left">
-                            <img src="assets/images/katrine.png" alt="Cat Katrine" class="carousel-image">
-                            <p class="pet-name">Katrine</p>
-                            <div class="button button_bordered learn-more-button">
-                                <a href="#no_scroll" class="link-button">Learn more</a>
-                            </div>
-                        </div>
-                        <div class="our-friends__item item-center">
-                            <img src="assets/images/jennifer.png" alt="Puppy Jennifer" class="carousel-image">
-                            <p class="pet-name">Jennifer</p>
-                            <div class="button button_bordered learn-more-button">
-                                <a href="#no_scroll" class="link-button">Learn more</a>
-                            </div>
-                        </div>
-                        <div class="our-friends__item item-right">
-                            <img src="assets/images/woody.png" alt="Dog Woody" class="carousel-image">
-                            <p class="pet-name">Woody</p>
-                            <div class="button button_bordered learn-more-button">
-                                <a href="#no_scroll" class="link-button">Learn more</a>
+                        <div class="carousel-wrapper" id="carousel-wrapper">
+                            <div class="carousel" id="carousel">
+                                <div class="slider-item slider-item__left">
+                                </div>
+
+                                <div class="slider-item slider-item__main">
+                                </div>
+
+                                <div class="slider-item slider-item__right">
+                                </div>
                             </div>
                         </div>
 
-                        <button class="arrow-button right-button">
+                        <button class="arrow-button right-button" id="btn-right">
                             <img src="assets/icons/arrow1.svg" alt="">
                         </button>
+
                     </div>
                 </div>
                 <div class="button button_colored button_long">
@@ -224,6 +217,7 @@
         </div>
     </footer>
     <script src="./javascript/burger.js"></script>
+    <script src="./javascript/slider.js"></script>
 </body>
 
 </html>

@@ -925,7 +925,8 @@ a {
   }
 }
 
-.carousel-elements {
+.carousel-container,
+.carousel {
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -934,7 +935,8 @@ a {
   margin: 59px 0 60px;
 }
 @media (max-width: 400px) {
-  .carousel-elements {
+  .carousel-container,
+  .carousel {
     margin-top: 42px;
     flex-direction: row;
     flex-wrap: wrap;
@@ -989,6 +991,8 @@ a {
   .our-friends__item {
     order: -1;
     margin: 0 40px 20px;
+    display: flex;
+    flex-direction: row;
   }
 }
 
@@ -998,6 +1002,7 @@ a {
 @media (max-width: 400px) {
   .left-button {
     margin: 0 40px;
+    order: 3;
   }
 }
 
@@ -1428,6 +1433,109 @@ a {
   .footer__description {
     padding-left: 10px;
   }
+}
+
+.carousel-container {
+  max-width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (max-width: 400px) {
+  .carousel-container {
+    margin-top: 42px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 42px;
+  }
+}
+
+.carousel-wrapper {
+  order: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1096px;
+  overflow: hidden;
+}
+@media (max-width: 768px) {
+  .carousel-wrapper {
+    width: 604px;
+  }
+}
+
+.carousel {
+  width: 300%;
+  height: 435px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.slider-item {
+  width: 1096px;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+@media (max-width: 768px) {
+  .slider-item {
+    width: 604px;
+  }
+}
+
+@media (max-width: 400px) {
+  .slider-item__main,
+  .slider-item__right {
+    margin-top: 40px;
+  }
+}
+
+.our-friends__item {
+  height: 435px;
+  width: 270px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 9px;
+  background-color: var(--color-light-s);
+}
+
+.arrow-button {
+  z-index: 7;
+}
+
+@keyframes move-right {
+  from {
+    left: 0;
+  }
+  to {
+    left: -100%;
+  }
+}
+.transition-right {
+  animation-name: move-right;
+  animation-duration: 2.5s;
+}
+
+@keyframes move-left {
+  from {
+    left: 0;
+  }
+  to {
+    left: 100%;
+  }
+}
+.transition-left {
+  animation-name: move-left;
+  animation-duration: 2.5s;
 }
 
 /*# sourceMappingURL=style.css.map */

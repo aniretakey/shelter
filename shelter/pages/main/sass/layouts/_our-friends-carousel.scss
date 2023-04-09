@@ -1,0 +1,103 @@
+.carousel-container {
+  max-width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @include media-400 {
+    margin-top: 42px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 42px;
+  }
+}
+
+.carousel-wrapper {
+  order: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1096px;
+  overflow: hidden;
+
+  @include media-tablet {
+    width: 604px;
+  }
+}
+
+.carousel {
+  width: 300%;
+  height: 435px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.slider-item {
+  width: 1096px;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  @include media-tablet {
+    width: 604px;
+  }
+}
+
+.slider-item__main,
+.slider-item__right {
+  @include media-400 {
+    margin-top: 40px;
+  }
+}
+
+.our-friends__item {
+  height: 435px;
+  width: 270px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 9px;
+  background-color: var(--color-light-s);
+}
+
+.arrow-button {
+  z-index: 7;
+}
+
+// Animation buttons
+
+@keyframes move-right {
+  from {
+    left: 0;
+  }
+  to {
+    left: -100%;
+  }
+}
+
+.transition-right {
+  animation-name: move-right;
+  animation-duration: 2.5s;
+}
+
+@keyframes move-left {
+  from {
+    left: 0;
+  }
+  to {
+    left: 100%;
+  }
+}
+
+.transition-left {
+  animation-name: move-left;
+  animation-duration: 2.5s;
+}
