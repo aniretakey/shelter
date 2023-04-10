@@ -8,9 +8,11 @@
 @import "./base/base";
 @import "./base/buttons";
 @import "./base/hamburger";
+@import "./../../main/sass/base/popup";
 
 //Layout
 @import "./layouts/wrapper";
 @import "./layouts/header";
 @import "./layouts/our-friends";
 @import "./layouts/footer";
+@import "./layouts/our-friends_pagination";

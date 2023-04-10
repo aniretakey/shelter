@@ -52,7 +52,7 @@
             <div class="wrapper our-friends-wrapper">
                 <h1 class="our-friends__title">Our friends who<br>are looking for a house</h1>
                 <div class="layout-4-column">
-                    <div class="our-friends__item">
+                    <!-- <div class="our-friends__item">
                         <img class="our-friends__image" src="../../assets/images/katrine.png" alt="Cat Katrine">
                         <p class="pet-name">Katrine</p>
                         <div class="button button_bordered learn-more-button">
@@ -108,30 +108,30 @@
                             <a href="#no_scroll" class="link-button">Learn more</a>
                         </div>
                     </div>
+                </div> -->
+
+                    <div class="pagination">
+                        <button class="arrow-button arrow-disabled-button">
+                            <span class="arrow-symbols">&lt;&lt;</span>
+                        </button>
+
+                        <button class="arrow-button arrow-disabled-button">
+                            <span class="arrow-symbols">&lt;</span>
+                        </button>
+
+                        <button class="arrow-button page-number-button">
+                            <span class="arrow-symbols">1</span>
+                        </button>
+
+                        <button class="arrow-button">
+                            <span class="arrow-symbols">&gt;</span>
+                        </button>
+
+                        <button class="arrow-button">
+                            <span class="arrow-symbols">&gt;&gt;</span>
+                        </button>
+                    </div>
                 </div>
-
-                <div class="pagination">
-                    <button class="arrow-button arrow-disabled-button">
-                        <span class="arrow-symbols">&lt;&lt;</span>
-                    </button>
-
-                    <button class="arrow-button arrow-disabled-button">
-                        <span class="arrow-symbols">&lt;</span>
-                    </button>
-
-                    <button class="arrow-button page-number-button">
-                        <span class="arrow-symbols">1</span>
-                    </button>
-
-                    <button class="arrow-button">
-                        <span class="arrow-symbols">&gt;</span>
-                    </button>
-
-                    <button class="arrow-button">
-                        <span class="arrow-symbols">&gt;&gt;</span>
-                    </button>
-                </div>
-            </div>
         </section>
     </main>
 
@@ -169,7 +169,19 @@
 
         </div>
     </footer>
+
+    <div class="modal__wrapper" id="modal">
+        <div class="modal__block">
+            <span class="modal_close"><img src="./../../assets/icons/modal_close_button.svg" class="modal_close__icon" alt=""></span>
+            <div class="modal__content">
+            </div>
+        </div>
+    </div>
+    </div>
+
     <script src="./../../javascript/burger.js"></script>
+    <script src="./../../javascript/pagination.js"></script>
+    <script src="./../../javascript/pop-up-pets.js"></script>
 </body>
 
 </html>

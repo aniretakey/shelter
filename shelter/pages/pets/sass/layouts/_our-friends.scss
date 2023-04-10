@@ -55,7 +55,7 @@
 }
 
 .our-friends__item {
-  max-width: 270px;
+  width: 270px;
   height: 435px;
 
   display: flex;
@@ -115,6 +115,7 @@
 }
 
 .pagination {
+  order: 2;
   margin: 16px auto 100px;
   display: flex;
   flex-direction: row;
