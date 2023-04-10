@@ -186,19 +186,32 @@ addCards(mainArr, MAIN_ITEM);
 
 let leftArr;
 const leftSliderCardGenerator = () => {
-  leftArr = getRandomNumber(5, [...mainArr]).splice(-3, 3);
-  addCards(leftArr, LEFT_ITEM);
+  if (window.matchMedia("(min-width: 1031px)").matches) {
+    leftArr = getRandomNumber(5, mainArr).splice(-3, 3);
+    addCards(leftArr, LEFT_ITEM);
+  } else if (window.matchMedia("(min-width: 701px)").matches) {
+    leftArr = getRandomNumber(3, [...mainArr]).splice(-2, 2);
+    addCards(leftArr, LEFT_ITEM);
+  } else {
+    leftArr = getRandomNumber(1, [...mainArr]).splice(-1, 1);
+    addCards(leftArr, LEFT_ITEM);
+  }
 };
 leftSliderCardGenerator();
 
 //////////////////////// Add random cards to right block ////////////////////////
 let rightArr;
 const rightSliderCardGenerator = () => {
-  rightArr = [
-    ...getRandomNumber(7, [...mainArr, ...leftArr]),
-    leftArr[Math.floor(Math.random() * 3)],
-  ].splice(-3, 3);
-  addCards(rightArr, RIGHT_ITEM);
+  if (window.matchMedia("(min-width: 1031px)").matches) {
+    rightArr = getRandomNumber(5, [...mainArr]).splice(-3, 3);
+    addCards(rightArr, RIGHT_ITEM);
+  } else if (window.matchMedia("(min-width: 701px)").matches) {
+    rightArr = getRandomNumber(3, [...mainArr]).splice(-2, 2);
+    addCards(rightArr, RIGHT_ITEM);
+  } else {
+    rightArr = getRandomNumber(1, [...mainArr]).splice(-1, 1);
+    addCards(rightArr, RIGHT_ITEM);
+  }
 };
 rightSliderCardGenerator();
 
@@ -227,14 +240,17 @@ CAROUSEL.addEventListener("animationend", (animationEvent) => {
   if (animationEvent.animationName === "move-left") {
     CAROUSEL.classList.remove("transition-left");
     const leftItems = LEFT_ITEM.innerHTML;
-
     MAIN_ITEM.innerHTML = leftItems;
-
     LEFT_ITEM.innerHTML = "";
-    newArr = [
-      ...getRandomNumber(7, [...mainArr, ...rightArr]),
-      rightArr[Math.floor(Math.random() * 3)],
-    ].splice(-3, 3);
+
+    if (window.matchMedia("(min-width: 1031px)").matches) {
+      newArr = getRandomNumber(5, [mainArr]).splice(-3, 3);
+    } else if (window.matchMedia("(min-width: 701px)").matches) {
+      newArr = getRandomNumber(3, [...mainArr]).splice(-2, 2);
+    } else {
+      newArr = getRandomNumber(1, [...mainArr]).splice(-1, 1);
+    }
+
     rightArr = mainArr;
     mainArr = leftArr;
     leftArr = newArr;
@@ -243,14 +259,17 @@ CAROUSEL.addEventListener("animationend", (animationEvent) => {
   } else {
     CAROUSEL.classList.remove("transition-right");
     const rightItems = RIGHT_ITEM.innerHTML;
-
     MAIN_ITEM.innerHTML = rightItems;
-
     RIGHT_ITEM.innerHTML = "";
-    newArr = [
-      ...getRandomNumber(7, [...mainArr, ...leftArr]),
-      leftArr[Math.floor(Math.random() * 3)],
-    ].splice(-3, 3);
+
+    if (window.matchMedia("(min-width: 1031px)").matches) {
+      newArr = getRandomNumber(5, [...mainArr]).splice(-3, 3);
+    } else if (window.matchMedia("(min-width: 701px)").matches) {
+      newArr = getRandomNumber(3, [...mainArr]).splice(-2, 2);
+    } else {
+      newArr = getRandomNumber(1, [...mainArr]).splice(-1, 1);
+    }
+
     leftArr = mainArr;
     mainArr = rightArr;
     rightArr = newArr;
