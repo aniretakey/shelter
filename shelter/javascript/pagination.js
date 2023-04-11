@@ -224,12 +224,30 @@ pagesButton.innerHTML = `${pageNumber}`;
 
 ////////////////////// Buttons logic //////////////////////////////
 
+document.getElementById("arrow-button-left").disabled = true;
+document.getElementById("arrow-button-2-left").disabled = true;
+
 backArrow.addEventListener("click", () => {
   --pageNumber;
   currentArray = newArr[pageNumber - 1];
   petCards.innerHTML = "";
   addCards(currentArray, petCards);
   pagesButton.innerHTML = `${pageNumber}`;
+
+  forthArrow.classList.remove("arrow-disabled-button");
+  forthTwoArrows.classList.remove("arrow-disabled-button");
+
+  document.getElementById("arrow-button-right").disabled = false;
+  document.getElementById("arrow-button-2-right").disabled = false;
+
+  if (pageNumber != 1) {
+    backArrow.classList.remove("arrow-disabled-button");
+    backTwoArrows.classList.remove("arrow-disabled-button");
+  } else {
+    backArrow.classList.add("arrow-disabled-button");
+    backTwoArrows.classList.add("arrow-disabled-button");
+    document.getElementById("arrow-button-left").disabled = true;
+  }
 });
 
 forthArrow.addEventListener("click", () => {
@@ -238,6 +256,22 @@ forthArrow.addEventListener("click", () => {
   petCards.innerHTML = "";
   addCards(currentArray, petCards);
   pagesButton.innerHTML = `${pageNumber}`;
+
+  document.getElementById("arrow-button-left").disabled = false;
+  document.getElementById("arrow-button-2-left").disabled = false;
+
+  if (pageNumber == 48 / maxCardsOnPage()) {
+    document.getElementById("arrow-button-right").disabled = true;
+    document.getElementById("arrow-button-2-right").disabled = true;
+    forthArrow.classList.add("arrow-disabled-button");
+    forthTwoArrows.classList.add("arrow-disabled-button");
+  }
+
+  if (pageNumber != 1) {
+    backArrow.classList.remove("arrow-disabled-button");
+    backTwoArrows.classList.remove("arrow-disabled-button");
+    backArrow.addEventListener("click", moveLeft);
+  }
 });
 
 backTwoArrows.addEventListener("click", () => {
@@ -246,6 +280,15 @@ backTwoArrows.addEventListener("click", () => {
   petCards.innerHTML = "";
   addCards(currentArray, petCards);
   pagesButton.innerHTML = `${pageNumber}`;
+
+  document.getElementById("arrow-button-right").disabled = false;
+  document.getElementById("arrow-button-2-right").disabled = false;
+
+  backArrow.classList.add("arrow-disabled-button");
+  backTwoArrows.classList.add("arrow-disabled-button");
+
+  forthArrow.classList.remove("arrow-disabled-button");
+  forthTwoArrows.classList.remove("arrow-disabled-button");
 });
 
 forthTwoArrows.addEventListener("click", () => {
@@ -254,4 +297,16 @@ forthTwoArrows.addEventListener("click", () => {
   petCards.innerHTML = "";
   addCards(currentArray, petCards);
   pagesButton.innerHTML = `${pageNumber}`;
+
+  document.getElementById("arrow-button-right").disabled = true;
+  document.getElementById("arrow-button-2-right").disabled = true;
+
+  document.getElementById("arrow-button-left").disabled = false;
+  document.getElementById("arrow-button-2-left").disabled = false;
+
+  backArrow.classList.remove("arrow-disabled-button");
+  backTwoArrows.classList.remove("arrow-disabled-button");
+
+  forthArrow.classList.add("arrow-disabled-button");
+  forthTwoArrows.classList.add("arrow-disabled-button");
 });
