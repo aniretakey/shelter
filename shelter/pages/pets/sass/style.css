@@ -714,6 +714,7 @@ h5 {
   .modal__subtitle {
     display: flex;
     align-self: center;
+    text-align: center;
   }
 }
 
@@ -725,6 +726,11 @@ h5 {
     margin: auto;
   }
 }
+@media (max-width: 400px) {
+  .modal__description {
+    text-align: justify;
+  }
+}
 
 .pet-list {
   padding-left: 10px;
@@ -732,6 +738,12 @@ h5 {
 @media (max-width: 767px) {
   .pet-list {
     padding: 0 10px 0 0;
+  }
+}
+@media (max-width: 400px) {
+  .pet-list {
+    align-self: flex-start;
+    padding-left: 10px;
   }
 }
 

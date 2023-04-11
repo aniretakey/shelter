@@ -149,36 +149,13 @@ function createCard(elem, itemBlock) {
   card.append(petName);
   card.append(cardButton);
   itemBlock.append(card);
-
-  //   let pageArrows = document.createElement("div");
-  //   pageArrows.classList.add("pagination");
-  //   cardButton.innerHTML = `<button class="arrow-button arrow-disabled-button">
-  //       <span class="arrow-symbols">&lt;&lt;</span>
-  //       </button>
-
-  //       <button class="arrow-button arrow-disabled-button">
-  //       <span class="arrow-symbols">&lt;</span>
-  //       </button>
-
-  //       <button class="arrow-button page-number-button">
-  //       <span class="arrow-symbols">1</span>
-  //       </button>
-
-  //       <button class="arrow-button">
-  //       <span class="arrow-symbols">&gt;</span>
-  //       </button>
-
-  //       <button class="arrow-button">
-  //       <span class="arrow-symbols">&gt;&gt;</span>
-  //       </button>`;
-
-  //   itemBlock.after(pageArrows);
 }
 
-////////////////// Generator for 3 random number (from 1 to 8) //////////////////
+////////////////// Generator for random number (from 0 to 7) //////////////////
 
-function getRandomNumber(newLength, arr = []) {
-  while (arr.length <= newLength) {
+function getRandomNumber(length) {
+  let arr = [];
+  while (arr.length <= length - 1) {
     let number = Math.floor(Math.random() * 8);
     if (!arr.includes(number)) {
       arr.push(number);
@@ -195,9 +172,86 @@ function addCards(arrName, itemBlock) {
   });
 }
 
+//////////////////// Get number of max cards on page ////////////////////////
+
+function maxCardsOnPage() {
+  let cards;
+  if (window.innerWidth >= 1030) {
+    cards = 8;
+  }
+
+  if (window.innerWidth <= 1030 && window.innerWidth >= 351) {
+    cards = 6;
+  }
+
+  if (window.innerWidth <= 350) {
+    cards = 3;
+  }
+  return cards;
+}
+
+////////////////////// Get array of 48 numbers //////////////////////////////
+
+function getRandomArr48() {
+  let innerArr = [];
+  let resultArr = [];
+  for (let i = 0; i < 48 / maxCardsOnPage(); i++) {
+    while (resultArr.length < 48 / maxCardsOnPage()) {
+      innerArr = getRandomNumber(maxCardsOnPage());
+      resultArr.push(innerArr);
+    }
+  }
+  return resultArr;
+}
+
+////////////////////// Add cards to first page //////////////////////////////
+
+let pageNumber = 1;
+let newArr = getRandomArr48(maxCardsOnPage());
 let petCards = document.querySelector(".layout-4-column");
-// createCard(0, petCards);
 
-let newArr = [0, 1, 2, 3, 4, 5, 6, 7];
+let currentArray;
+currentArray = newArr[pageNumber - 1];
+addCards(currentArray, petCards);
 
-addCards(newArr, petCards);
+let backTwoArrows = document.querySelector(".arrow-button-2-left"),
+  backArrow = document.querySelector(".arrow-button-left"),
+  pagesButton = document.querySelector(".page-number"),
+  forthArrow = document.querySelector(".arrow-button-right"),
+  forthTwoArrows = document.querySelector(".arrow-button-2-right");
+
+pagesButton.innerHTML = `${pageNumber}`;
+
+////////////////////// Buttons logic //////////////////////////////
+
+backArrow.addEventListener("click", () => {
+  --pageNumber;
+  currentArray = newArr[pageNumber - 1];
+  petCards.innerHTML = "";
+  addCards(currentArray, petCards);
+  pagesButton.innerHTML = `${pageNumber}`;
+});
+
+forthArrow.addEventListener("click", () => {
+  ++pageNumber;
+  currentArray = newArr[pageNumber - 1];
+  petCards.innerHTML = "";
+  addCards(currentArray, petCards);
+  pagesButton.innerHTML = `${pageNumber}`;
+});
+
+backTwoArrows.addEventListener("click", () => {
+  pageNumber = 1;
+  currentArray = newArr[pageNumber - 1];
+  petCards.innerHTML = "";
+  addCards(currentArray, petCards);
+  pagesButton.innerHTML = `${pageNumber}`;
+});
+
+forthTwoArrows.addEventListener("click", () => {
+  pageNumber = 48 / maxCardsOnPage();
+  currentArray = newArr[pageNumber - 1];
+  petCards.innerHTML = "";
+  addCards(currentArray, petCards);
+  pagesButton.innerHTML = `${pageNumber}`;
+});
