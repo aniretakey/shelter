@@ -27,6 +27,11 @@ if (overlay) {
         document.body.classList.remove("lock");
         iconMenu.classList.remove("_active");
         nav.classList.remove("header__navigation_active");
+      } else if (e.target.closest(".navigation")) {
+        overlay.classList.remove("overlay_active");
+        document.body.classList.remove("lock");
+        iconMenu.classList.remove("_active");
+        nav.classList.remove("header__navigation_active");
       }
     }
   });
